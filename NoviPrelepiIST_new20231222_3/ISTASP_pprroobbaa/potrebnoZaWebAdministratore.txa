@@ -1,0 +1,53 @@
+﻿Potrebne informacije za unos novog istraživanja koje treba dostaviti 
+administratorima Webunos aplikacije (Olja Musić,Jagoda LJuboja-Rađen,Uroš Stojanović)
+
+1	Šifra istraživanja
+	SRM21
+
+2	Statistička oblast kome istraživanje pripada
+	XXXXXXXXXXXXXXXXXXXXX
+
+3	Naziv istraživanja – srpski,ćirilica
+	Речни саобраћај
+
+4	Naziv istraživanja - engleski
+	XXXXXXXXXXXXXXXXXXXXX
+
+5	Periodika istraživanja
+	KV
+
+6	Link ka aplikaciji – za spoljne korisnike  
+	pod2.stat.gov.rs/WIST/ISTASP_SRM21/Default.aspx
+
+7	Link ka aplikaciji – za korisnike RZS-a							
+	10.13.18.4/WIST/ISTASP_SRM21/Default.aspx 
+
+8	Vrsta programa u kome je urađena aplikacija (trenutno podržani .Net, Excel,Blaise) 
+	.Net
+
+9	Ime servera i baze u kojima je adresar istraživanja i ime servera i baze u kojima se upisuju podaci, preko web aplikacije.
+	DATA SOURCE=IMT2;INITIAL CATALOG=SAOBRACAJ;
+
+10	Informacije o ključu upitnika – spisak polja iz adresara koja su ključ 
+	(za svako polje su potrebne informacije o nazivu, dužini i tipu polja u bazi).
+
+	Kapetanije: Kapetanija nvarchar(2)
+Kapetanije: Kapetanija nvarchar(2)
+
+
+11	Obavezan deo ključa je matični broj preduzeća, jer je Webunos aplikacija kreirana za preduzeća koja 
+	popunjavaju upitnike RZS-a preko weba.
+	IST napomena: ubacite u adresar polje WebUnos - bit i mbr (ako nemate)  char(8)
+
+12	Imena administratora statističara koji će se baviti nalozima korisnika.
+	XXXXXXXXXXXXXXXXXXXXX
+
+13	Informacije o kontakt osobi (ime i telefon tj. lokal) – statističar koji će biti dostupan korisnicima radi pomoći oko upitnika.
+	XXXXXXXXXXXXXXXXXXXXX
+
+14	Kreirati 2 uputstva za pristup alikaciji. 
+	Jedno uputstvo je za korisnike sa jednim upitnikom (rola 1), 
+	a drugo je za korisnike sa više upitnika (rola 3).
+	Šema za uputstva već postoji.
+	IST napomena: 	doc\primerUputstva_rola1.doc
+			doc\primerUputstva_rola3.doc

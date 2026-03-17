@@ -1,0 +1,738 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CE4665AA-EEEE-400F-B7B3-9899E8D476B3}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>IstrazivanjaUnos</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>Off</OptionStrict>
+    <RootNamespace>IstrazivanjaUnos</RootNamespace>
+    <StartupObject>IstrazivanjaUnos.%28None%29</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>Windows</MyType>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\_refs\adodb.dll</HintPath>
+    </Reference>
+    <Reference Include="CryptoReader">
+      <HintPath>..\_refs\CryptoReader.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.MSDASC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>..\_refs\Interop.MSDASC.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.OLEDBError">
+      <HintPath>..\_refs\Interop.OLEDBError.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\_refs\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\_refs\Microsoft.Office.Interop.Outlook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\_refs\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Name>Microsoft.VisualBasic</Name>
+    </Reference>
+    <Reference Include="mkc_ColorCombobox, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_refs\mkc_ColorCombobox.dll</HintPath>
+    </Reference>
+    <Reference Include="Office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\_refs\Office.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\DatasetIstrazivanja\DatasetIstrazivanja.vbproj">
+      <Name>DatasetIstrazivanja</Name>
+      <Project>{1748B7D4-9E32-4635-ADDB-EC39C1D35B00}</Project>
+      <Package>{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\IstrazivanjaVremenskaTackaControl\IstrazivanjaVremenskaTackaControl.vbproj">
+      <Name>IstrazivanjaVremenskaTackaControl</Name>
+      <Project>{033A9DC6-1614-4466-BAF6-875F5CB8FC47}</Project>
+      <Package>{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</Package>
+    </ProjectReference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Azur.vb" />
+    <Compile Include="Controls\AMasterControl.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\cModule.vb" />
+    <Compile Include="Controls\DetailControl.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\MasterControl.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DatasetGreske.Designer.vb">
+      <DependentUpon>DatasetGreske.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DatasetLogickaKontrolaIzvestaj.Designer.vb">
+      <DependentUpon>DatasetLogickaKontrolaIzvestaj.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="FormAgregiranje.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAK.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAzurirajFilterColumns.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIstUnosSV20.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIzvestaji.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNaprednaPretragaUnos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportExcelNovo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPESAdresar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPoljoPES.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPpoljoPesKon.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPpoljoKon.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPoljoprivreda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUnesiParametreOdjednom.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GridRowComparerUnos.vb" />
+    <Compile Include="OOoConstants.vb" />
+    <Compile Include="OOoMessages.vb" />
+    <Compile Include="OOoTools.vb" />
+    <Compile Include="OOo_Examples.vb" />
+    <Compile Include="FormFilterN.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFilterT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFind.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPopisAdresar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSort.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoginCloud.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormEnterEventAssign.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormEnterEventScrollDown.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormEnterEventAutoN.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormExitEventOptionMessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormExitEventDelete.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormExitEventColor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormEnterEventReadOnly.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormEnterEventVisibleFalse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormEnterEventVisibleTrue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormExitEventVisibleTrue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormExitEventVisibleFalse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormExitEventReadOnly.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormExitEventSimpleMessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormExitEventMessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormExitEventStop.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormExitEventAssign.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormInsertVF.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormVisible.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormEnable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormConvertEmptySpace.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormActivate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormAppereanceChB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormAppereanceTB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormAppereancePodTabBtn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormAppereanceTab.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormInsertButton.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormExitEventSkip.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormMerge.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormFormatConvertLinkLabel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormFormatConvertRadioButtonGroup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormFormatConvertDateTimePicker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormInsertTB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormInsertRelacija.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormInsertMultiCheckB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormFormatConvertCB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormFormatConvertACTB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormInsertDGV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormRename.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormFormat.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAzuriraj.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAzurirajFilterRows.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCATI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormConvertType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mFormAppereanceLBL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIstUnos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIstUnosGlave.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormIzbor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogickaKontrola.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOptionMSG.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoginAnketara.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogickaKontrola.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="mFormInsertTableForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OleDbConnString.vb" />
+    <EmbeddedResource Include="Controls\AMasterControl.resx">
+      <DependentUpon>AMasterControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\MasterControl.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAgregiranje.resx">
+      <DependentUpon>FormAgregiranje.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAK.resx">
+      <DependentUpon>FormAK.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAzurirajFilterColumns.resx">
+      <DependentUpon>FormAzurirajFilterColumns.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIstUnosSV20.resx">
+      <DependentUpon>FormIstUnosSV20.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIzvestaji.resx">
+      <DependentUpon>FormIzvestaji.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNaprednaPretragaUnos.resx">
+      <DependentUpon>FormNaprednaPretragaUnos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportExcelNovo.resx">
+      <DependentUpon>FormImportExcelNovo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPESAdresar.resx">
+      <DependentUpon>FormPESAdresar.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPoljoPES.resx">
+      <DependentUpon>FormPoljoPES.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPpoljoPesKon.resx">
+      <DependentUpon>FormPpoljoPesKon.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPpoljoKon.resx">
+      <DependentUpon>FormPpoljoKon.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPoljoprivreda.resx">
+      <DependentUpon>FormPoljoprivreda.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUnesiParametreOdjednom.resx">
+      <DependentUpon>FormUnesiParametreOdjednom.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogickaKontrola.resx">
+      <DependentUpon>LogickaKontrola.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="FormFilterN.resx">
+      <DependentUpon>FormFilterN.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFilterT.resx">
+      <DependentUpon>FormFilterT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFind.resx">
+      <DependentUpon>FormFind.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPopisAdresar.resx">
+      <DependentUpon>FormPopisAdresar.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSort.resx">
+      <DependentUpon>FormSort.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoginCloud.resx">
+      <DependentUpon>FormLoginCloud.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormEnterEventAssign.resx">
+      <DependentUpon>mFormEnterEventAssign.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormEnterEventScrollDown.resx">
+      <DependentUpon>mFormEnterEventScrollDown.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormEnterEventAutoN.resx">
+      <DependentUpon>mFormEnterEventAutoN.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormExitEventOptionMessage.resx">
+      <DependentUpon>mFormExitEventOptionMessage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormExitEventDelete.resx">
+      <DependentUpon>mFormExitEventDelete.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormExitEventColor.resx">
+      <DependentUpon>mFormExitEventColor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormEnterEventReadOnly.resx">
+      <DependentUpon>mFormEnterEventReadOnly.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormEnterEventVisibleFalse.resx">
+      <DependentUpon>mFormEnterEventVisibleFalse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormEnterEventVisibleTrue.resx">
+      <DependentUpon>mFormEnterEventVisibleTrue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormExitEventVisibleTrue.resx">
+      <DependentUpon>mFormExitEventVisibleTrue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormExitEventVisibleFalse.resx">
+      <DependentUpon>mFormExitEventVisibleFalse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormExitEventReadOnly.resx">
+      <DependentUpon>mFormExitEventReadOnly.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormExitEventSimpleMessage.resx">
+      <DependentUpon>mFormExitEventSimpleMessage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormExitEventMessage.resx">
+      <DependentUpon>mFormExitEventMessage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormExitEventStop.resx">
+      <DependentUpon>mFormExitEventStop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormExitEventAssign.resx">
+      <DependentUpon>mFormExitEventAssign.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormInsertVF.resx">
+      <DependentUpon>mFormInsertVF.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormVisible.resx">
+      <DependentUpon>mFormVisible.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormEnable.resx">
+      <DependentUpon>mFormEnable.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormConvertEmptySpace.resx">
+      <DependentUpon>mFormConvertEmptySpace.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormActivate.resx">
+      <DependentUpon>mFormActivate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormAppereanceChB.resx">
+      <DependentUpon>mFormAppereanceChB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormAppereanceTB.resx">
+      <DependentUpon>mFormAppereanceTB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormAppereancePodTabBtn.resx">
+      <DependentUpon>mFormAppereancePodTabBtn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormAppereanceTab.resx">
+      <DependentUpon>mFormAppereanceTab.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormInsertButton.resx">
+      <DependentUpon>mFormInsertButton.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormExitEventSkip.resx">
+      <DependentUpon>mFormExitEventSkip.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormMerge.resx">
+      <DependentUpon>mFormMerge.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormFormatConvertLinkLabel.resx">
+      <DependentUpon>mFormFormatConvertLinkLabel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormFormatConvertRadioButtonGroup.resx">
+      <DependentUpon>mFormFormatConvertRadioButtonGroup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormFormatConvertDateTimePicker.resx">
+      <DependentUpon>mFormFormatConvertDateTimePicker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormInsertTB.resx">
+      <DependentUpon>mFormInsertTB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormInsertRelacija.resx">
+      <DependentUpon>mFormInsertRelacija.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormInsertMultiCheckB.resx">
+      <DependentUpon>mFormInsertMultiCheckB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormFormatConvertCB.resx">
+      <DependentUpon>mFormFormatConvertCB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormFormatConvertACTB.resx">
+      <DependentUpon>mFormFormatConvertACTB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormInsertDGV.resx">
+      <DependentUpon>mFormInsertDGV.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormRename.resx">
+      <DependentUpon>mFormRename.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormFormat.resx">
+      <DependentUpon>mFormFormat.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAzuriraj.resx">
+      <DependentUpon>FormAzuriraj.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAzurirajFilterRows.resx">
+      <DependentUpon>FormAzurirajFilterRows.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCATI.resx">
+      <DependentUpon>FormCATI.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormConvertType.resx">
+      <DependentUpon>mFormConvertType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormAppereanceLBL.resx">
+      <DependentUpon>mFormAppereanceLBL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIstUnos.resx">
+      <DependentUpon>FormIstUnos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIstUnosGlave.resx">
+      <DependentUpon>FormIstUnosGlave.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormIzbor.resx">
+      <DependentUpon>FormIzbor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogickaKontrola.resx">
+      <DependentUpon>FormLogickaKontrola.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoginAnketara.resx">
+      <DependentUpon>FormLoginAnketara.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOptionMSG.resx">
+      <DependentUpon>FormOptionMSG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mFormInsertTableForm.resx">
+      <DependentUpon>mFormInsertTableForm.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DatasetGreske.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatasetGreske.Designer.vb</LastGenOutput>
+    </Content>
+    <Content Include="Resources\unfilter.ico" />
+    <None Include="Resources\crtaaaaa.ico" />
+    <Content Include="Resources\filter.ico" />
+    <Content Include="Resources\image2vector.svg" />
+    <None Include="Resources\Move.cur" />
+    <None Include="Resources\IST1024.png" />
+    <None Include="Resources\IST32.png" />
+    <None Include="Resources\IST768.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DatasetGreske.xsc">
+      <DependentUpon>DatasetGreske.xsd</DependentUpon>
+    </None>
+    <None Include="DatasetGreske.xss">
+      <DependentUpon>DatasetGreske.xsd</DependentUpon>
+    </None>
+    <None Include="DatasetGreske.xsx">
+      <DependentUpon>DatasetGreske.xsd</DependentUpon>
+    </None>
+    <Content Include="DatasetLogickaKontrolaIzvestaj.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatasetLogickaKontrolaIzvestaj.Designer.vb</LastGenOutput>
+    </Content>
+    <None Include="DatasetLogickaKontrolaIzvestaj.xsc">
+      <DependentUpon>DatasetLogickaKontrolaIzvestaj.xsd</DependentUpon>
+    </None>
+    <None Include="DatasetLogickaKontrolaIzvestaj.xss">
+      <DependentUpon>DatasetLogickaKontrolaIzvestaj.xsd</DependentUpon>
+    </None>
+    <None Include="DatasetLogickaKontrolaIzvestaj.xsx">
+      <DependentUpon>DatasetLogickaKontrolaIzvestaj.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

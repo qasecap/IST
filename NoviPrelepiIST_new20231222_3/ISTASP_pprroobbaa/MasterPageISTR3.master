@@ -1,0 +1,240 @@
+﻿<%@ Master Language="VB" MasterPageFile="~/MasterPageIST.master" AutoEventWireup="false" CodeFile="MasterPageISTR3.master.vb" Inherits="MasterPageISTR3" %>
+
+
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="BaseContentPlaceHolder" Runat="Server">
+     
+  <html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" rev="stylesheet" type="text/css" href="CSS/IST.css" />
+<link rel="stylesheet" rev="stylesheet" type="text/css" href="CSS/Styles.css" />
+<link rel="stylesheet" rev="stylesheet" type="text/css" href="CSS/PopisStyle.css" />
+<link rel="stylesheet" rev="stylesheet" type="text/css" href="CSS/Strane.css" />
+<style type="text/css">
+    a:link
+    {
+        color: #000000;
+        text-decoration: none;
+        font-family: Verdana, Arial, Geneva, ms sans serif;
+        font-size: 10px;
+    }
+    /* unvisited link */a:visited
+    {
+        color: #000000;
+        text-decoration: none;
+    }
+    /* visited link */a:hover
+    {
+        color: #000000;
+        text-decoration: none;
+    }
+    /* mouse over link */a:active
+    {
+        color: #000000;
+        text-decoration: none;
+    }
+    /* selected link */.cssPager span
+    {
+        background-color: #CCCCCC;
+        font-size: 12px;
+    }
+    .cssPager td
+    {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .loading
+    {
+        background-image: url(images/loader.gif);
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+    .style1
+    {
+        border: 1px solid #FBFBFB;
+        font-family: Verdana, Arial, Geneva, ms sans serif;
+        font-size: 13px;
+        padding: 0px;
+        text-align: left;
+        vertical-align: middle;
+        white-space: nowrap;
+        height: 18px;
+    }
+</style>
+<%--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>--%>
+    <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+    <script type="text/javascript">
+        $("[src*=plus]").live("click", function() {
+            $(this).closest("tr").after("<tr><td></td><td colspan = '999'>" + $(this).next().html() + "</td></tr>")
+            $(this).attr("src", "images/minus.png");
+        });
+        $("[src*=minus]").live("click", function() {
+            $(this).attr("src", "images/plus.png");
+            $(this).closest("tr").next().remove();
+        });
+    </script>
+<div class="wrapper">        	
+	<div class="header"><h2 class="naslov">Речни саобраћај</h2></div>
+
+        <br />
+        <br />
+        <table>
+ 	    <tr>
+                <td class="style1" colspan="4">
+                    Изаберите период:</td>
+            </tr>
+            <tr>
+                <td class="style1">
+                    <asp:Label ID="lblGOD" runat="server" Text="Година"></asp:Label>
+                </td>
+                <td class="style1">
+                    <asp:Label ID="lblKV" runat="server" Text="Квартал"></asp:Label>
+                </td>
+                <td class="style1">
+                    <asp:Label ID="lblMES" runat="server" Text="Месец"></asp:Label>
+                </td>
+                <td class="style1">
+                    <asp:Label ID="lblSED" runat="server" Text="Седмица"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td class="IST13L">
+                    <asp:DropDownList ID="DDLGOD" runat="server" CssClass="dropdownlist" Height="21px"
+                        BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" Style="font-family: Verdana"
+                        Font-Size="11px"  >
+                        <asp:ListItem>2022</asp:ListItem>
+                        <asp:ListItem>2023</asp:ListItem>
+                    </asp:DropDownList>
+                </td>
+                <td class="IST13L">
+                    <asp:DropDownList ID="DDLKV" runat="server" CssClass="dropdownlist" Height="21px"
+                        BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" Style="font-family: Verdana"
+                        Font-Size="11px"  >
+                        <asp:ListItem>1</asp:ListItem>
+                        <asp:ListItem>2</asp:ListItem>
+                        <asp:ListItem>3</asp:ListItem>
+                        <asp:ListItem>4</asp:ListItem>
+                    </asp:DropDownList>
+                </td>
+                <td class="IST13L">
+                    <asp:DropDownList ID="DDLMES" runat="server" CssClass="dropdownlist" Height="21px"
+                        BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" Style="font-family: Verdana"
+                        Font-Size="11px"  >
+                        <asp:ListItem>01</asp:ListItem>
+                        <asp:ListItem>02</asp:ListItem>
+                        <asp:ListItem>03</asp:ListItem>
+                        <asp:ListItem>04</asp:ListItem>
+                        <asp:ListItem>05</asp:ListItem>
+                        <asp:ListItem>06</asp:ListItem>
+                        <asp:ListItem>07</asp:ListItem>
+                        <asp:ListItem>08</asp:ListItem>
+                        <asp:ListItem>09</asp:ListItem>
+                        <asp:ListItem>10</asp:ListItem>
+                        <asp:ListItem>11</asp:ListItem>
+                        <asp:ListItem>12</asp:ListItem>
+                    </asp:DropDownList>
+                </td>
+                <td class="IST13L">
+                    <asp:DropDownList ID="DDLSED" runat="server" CssClass="dropdownlist" Height="21px"
+                        BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" Style="font-family: Verdana"
+                        Font-Size="11px"  >
+                        <asp:ListItem>1</asp:ListItem>
+                        <asp:ListItem>2</asp:ListItem>
+                        <asp:ListItem>3</asp:ListItem>
+                        <asp:ListItem>4</asp:ListItem>
+                        <asp:ListItem>5</asp:ListItem>
+                        <asp:ListItem>6</asp:ListItem>
+                        <asp:ListItem>7</asp:ListItem>
+                        <asp:ListItem>8</asp:ListItem>
+                        <asp:ListItem>9</asp:ListItem>
+                        <asp:ListItem>10</asp:ListItem>
+                        <asp:ListItem>11</asp:ListItem>
+                        <asp:ListItem>12</asp:ListItem>
+                    </asp:DropDownList>
+                </td>
+            </tr>
+            <tr>
+                <td class="IST13L" colspan="4">
+                    &nbsp;
+                </td>
+            </tr>
+
+        <tr>
+            <td class="IST13L" colspan="4">
+                <asp:LinkButton ID="lbIzbor" runat="server" Font-Size="Small" Font-Underline="True"
+                    Width="300px" Style="height: 16px; margin-bottom: 5px;"> Избор упитника за унос</asp:LinkButton><br/>
+            </td>
+        </tr>
+	
+        <%--
+   	
+        
+   	<tr>
+            <td class="IST13L" colspan="4">
+                <asp:LinkButton ID="lbUnosPODACI_SRM21" runat="server" Font-Size="Small" Font-Underline="True"
+                    Width="300px" Style="height: 16px; margin-bottom: 5px;"> Унос - PODACI_SRM21</asp:LinkButton>
+            </td>
+        </tr>
+
+
+
+        
+   	<tr>
+            <td class="IST13L" colspan="4">
+                <asp:LinkButton ID="lbUnosPODACI_SRM21" runat="server" Font-Size="Small" Font-Underline="True"
+                    Width="300px" Style="height: 16px; margin-bottom: 5px;"> Унос - PODACI_SRM21</asp:LinkButton>
+            </td>
+        </tr>
+
+
+        
+   	<tr>
+            <td class="IST13L" colspan="4">
+                <asp:LinkButton ID="lbUnosPODACI_SRM21" runat="server" Font-Size="Small" Font-Underline="True"
+                    Width="300px" Style="height: 16px; margin-bottom: 5px;"> Унос - PODACI_SRM21</asp:LinkButton>
+            </td>
+        </tr>
+
+
+
+	--%>
+     
+        <tr>
+            <td class="IST13L" colspan="4">
+                <asp:LinkButton ID="lbPregled" runat="server" Font-Size="Small" Font-Underline="True"
+                    Width="300px" Style="height: 16px; margin-bottom: 5px;"> Преглед унетих слогова</asp:LinkButton>
+            </td>
+        </tr>
+        <tr>
+           <td class="IST13L" colspan="4">
+                <asp:LinkButton ID="lbIzvestaji" runat="server" Font-Size="Small" Font-Underline="True"
+                    Width="300px" Style="height: 16px; margin-bottom: 5px;"> Извештаји</asp:LinkButton>
+            </td>
+        </tr>
+  <tr>
+            <td class="IST13L" colspan="4">
+                <asp:LinkButton ID="lbMO" runat="server" Font-Size="Small" Font-Underline="True"
+                    Width="300px" Style="height: 16px; margin-bottom: 5px;"> Методолошка објашњења</asp:LinkButton>
+            </td>
+        </tr>
+         <tr>
+           <td class="IST13L" colspan="4">
+                <asp:LinkButton ID="lbKraj" runat="server" Font-Size="Small" Font-Underline="True"
+                    Width="500px" Style="height: 16px; margin-bottom: 5px;"> Крај рада</asp:LinkButton>
+            </td>
+        </tr>
+
+    </table>
+  <asp:ContentPlaceHolder id="ContentPlaceHolderInNestedMP" runat="server">
+       
+   </asp:ContentPlaceHolder>
+      	</div>
+</asp:Content>
+
+
+
+

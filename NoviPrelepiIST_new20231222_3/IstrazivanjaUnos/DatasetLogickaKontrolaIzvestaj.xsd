@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DatasetLogickaKontrolaIzvestaj" targetNamespace="http://tempuri.org/DatasetLogickaKontrolaIzvestaj.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/DatasetLogickaKontrolaIzvestaj.xsd"
+	xmlns:mstns="http://tempuri.org/DatasetLogickaKontrolaIzvestaj.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DatasetLogickaKontrolaIzvestaj" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="Tabele">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Naziv" type="xs:string" minOccurs="0" />
+							<xs:element name="Slogova" type="xs:long" minOccurs="0" />
+							<xs:element name="Neispravnih" type="xs:long" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Greske">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Tabela" type="xs:string" minOccurs="0" />
+							<xs:element name="RbrGreske" type="xs:string" minOccurs="0" />
+							<xs:element name="Slogova" type="xs:long" minOccurs="0" />
+							<xs:element name="GRESKA" type="xs:string" minOccurs="0" />
+							<xs:element name="NazivGreske" type="xs:string" minOccurs="0" />
+							<xs:element name="Akcija" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:key name="DatasetLogickaKontrolaIzvestajKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Tabele" />
+			<xs:field xpath="mstns:Naziv" />
+		</xs:key>
+		<xs:key name="DatasetLogickaKontrolaIzvestajKey2" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Greske" />
+			<xs:field xpath="mstns:Tabela" />
+			<xs:field xpath="mstns:RbrGreske" />
+		</xs:key>
+		<xs:keyref name="GreskeZaTabelu" refer="DatasetLogickaKontrolaIzvestajKey1" msdata:AcceptRejectRule="Cascade"
+			msdata:DeleteRule="Cascade" msdata:UpdateRule="Cascade">
+			<xs:selector xpath=".//mstns:Greske" />
+			<xs:field xpath="mstns:Tabela" />
+		</xs:keyref>
+	</xs:element>
+</xs:schema>

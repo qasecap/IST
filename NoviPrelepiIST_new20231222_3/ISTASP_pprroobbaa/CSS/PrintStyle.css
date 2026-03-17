@@ -1,0 +1,4 @@
+.NonPrintable, #Menu, #Footer 
+{
+  display: none;
+}

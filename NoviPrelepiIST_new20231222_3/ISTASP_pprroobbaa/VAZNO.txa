@@ -1,0 +1,90 @@
+﻿Šta je potrebno da generisana aplikacija radi:
+
+1 U ISTTABELE tabelu u polje T2 upišite parametar Web. On je ознака да се за табелу може генерисати aspx апликација за унос 
+
+2 U ISTLK tabelu unesite grešku koja ima funkciju Adresar
+
+
+NAPOMENA:
+Ако не постоји, креира се user IST_PPP који припада db_owner роли у бази.
+Zbog web administratora , u bazi se generiše i
+-u adresaru (ako ne postoji) polje MB  - char(8) i polje webUnos - bit  
+-tabela Veza_KljucUserIstrazivanje - potrebna zbog Role 3
+-view vAdresarKljuceviSIFIST -	gde je izslistano sve iz AdresaraZaWeb i dodato polje KLJUC koje se sastoji iz konkateniranih polja koja su primarni kljuc
+
+	
+
+PODSETNIK:
+
+ROLA1*** - jedan user unosi jedan upitnik (mb)
+
+	VAŽNA NAPOMENA: 
+	može se desiti da za vašu aplikaciju mb ne igra nikakvu ulogu,
+	
+	Primer: sve kapetanije imaju isti mb, 
+	u adresaru je kljuc rbrKapetanije, dodato je polje MBR zbog zahteva web administratora ** (popunjeno sa 12345678)
+	tako da je kljuc mbr+rbrKapetanije
+	user koji se loguje direktno ulazi u dodeljenu kapetaniju
+	user može da unosi više upitnika (kljuc u tabeli je god,mes,rbrKapetanije,rbr)
+	
+    
+ROLA3 - jedan user unosi više mb 
+
+ROLA6 - mi, sva prava 
+
+
+
+Generišu se 2 master strane: za rolu 1 i rolu 3 (isto je i za rolu 6)
+
+ako se radi o roli 1 - ne vidi se izbor upitnika za unos
+ako se radi o roli 3 ili 6 - do strane za unos ili ažuriranje može se doći samo preko izbora slova za unos ili preko pregleda unetih slogova
+
+
+3 Pre prebacivanja na server:
+
+	U Default.aspx.vb zakomentarišite 
+	
+  	'****************
+        rola = "6" : Session("Rola") = rola
+        god = "2014" : Session("God") = god
+        mes = "12" : Session("Mes") = mes
+        IDUser = "1581" : Session("IDUser") = IDUser
+        IDIstrazivanje = "GRADJ41" : Session("IDIstrazivanje") = IDIstrazivanje
+        99KLJUCKOM99
+        'XXXX spoljniUserKojiTrebaDaVidiSVe
+        'If IDUser = "XXXX" Then rola = "6"
+        '****************
+
+
+	Ovo služi da bi mogli da testirate aplikaciju kod sebe, pre prebacivanja na server.
+
+NAPOMENA: kod testiranja morate tabelu Veza_KljucUserIstrazivanje popuniti sa IDIstrazivanje,IDUser,Kljuc
+
+
+4 Prepravite primere uputstava. Oni se nalaze u doc direktorijumu generisane aplikacije
+
+
+5 Uroš treba da vam dodeli usere za testiranje.
+
+
+6 Aplikacija se prebacuje na 
+
+	\\10.13.18.4\IST$\WIST\
+
+	Možete prebaciti ceo folder IST_ASPxxx koji se generisao na vašem C disku. 
+	
+	JEDINO ŠTO NE TREBA PREBACITI JE web.config.   
+	web.config služi da bi mogli da testirate aplikaciju kod sebe, pre prebacivanja na server.
+
+	Početna strana je uvek \\10.13.18.4\IST$\WIST\IST_ASPxxx\Default.aspx 
+
+	ubacite svoje istraživanje u stranu meni
+
+        TESTIRANJE na http:http://pod2.stat.gov.rs/wist/LogIn.aspx   (možete od kuće, ovo je već "napolju")
+
+        user 5742, password mima
+
+7 На ИСТ бази отворен view awebIstrazivanjaAktivan којим се директно може прићи истраживањима на web-у. 
+Колона Активно се поставља на 1 ако истраживање треба да буде на web уносу, а на 0 ако је прошао web унос.
+
+

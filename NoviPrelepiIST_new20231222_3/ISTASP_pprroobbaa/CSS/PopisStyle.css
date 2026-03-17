@@ -1,0 +1,571 @@
+BODY
+{
+	background-color: white;
+	border-collapse: collapse;
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: .7em;
+	font-weight: normal;
+	letter-spacing: normal;
+	text-transform: none;
+	word-spacing: normal;
+}
+.MaskedEditFocus
+{
+	background-color: #ffffcc;
+	color: #000000;
+}
+.MaskedEditError
+{
+	background-color: #ffcccc;
+}
+.MaskedEditFocusNegative
+{
+	background-color: #ffffcc;
+	color: #ff0000;
+}
+.MaskedEditBlurNegative
+{
+	color: #ff0000;
+}
+
+
+
+.PopUtopia
+{
+	background-color: #fff;
+	background: #fff;
+	color: #00f;
+	font-weight: bold;
+	font-size: 0.8em;
+	border: 4px outset #ccc;
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	font-family: monospace,courier;
+}
+
+.tableTAB table
+{
+	background: #FFFFFF;
+	border: 1px white;
+	border-collapse: collapse;
+	padding: 0px;
+	color: #363636;
+	font: normal 11px verdana, arial, helvetica, sans-serif;
+	text-align: left;
+}
+
+
+/*tabela*/
+
+.tableDetalji table
+{
+	background: #FFFFFF;
+	border: 1px white;
+	border-collapse: collapse;
+	padding: 0px;
+	color: #363636;
+	font: normal 11px verdana, arial, helvetica, sans-serif;
+	text-align: left;
+}
+
+/*tabela header*/
+.tableDetalji th
+{
+	border: 1px solid gray;
+	background: #E9E9E9;
+	color: #363636;
+	padding: .4em;
+	text-align: center;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+/*tabela kad se predje misem (ovako dobijemo da header bude podvucen)*/
+.tableDetalji tbody td a:hover
+{
+	text-decoration: underline;
+}
+
+/*tabela celija*/
+.tableDetalji td
+{
+	color: #363636;
+	padding: .3em;
+}
+/*tabela red*/
+.tableDetalji tr
+{
+	border: 1px dotted gray;
+}
+
+/*boja kad se prelazi misem*/
+.tableDetalji tbody tr:hover
+{
+	background: #CCCCCC;
+	border: 1px solid #03476F;
+}
+
+/*boja brojeva u pageru*/
+.tableDetalji tbody td a
+{
+	color: #363636;
+	text-decoration: none;
+}
+
+/*boja fonta u zaglavlju*/
+.tableDetalji tbody th a
+{
+	color: #363636;
+	font-weight: normal;
+	text-decoration: none;
+}
+.txt
+{
+	color: #000000;
+}
+.txtBoxM
+{
+	color: #284E98;
+	font-family: tahoma,verdana,sans-serif;
+	font-size: 8pt;
+	font-weight: normal;
+}
+.PitanjaLeft
+{
+	color: #284E98;
+	font-family: tahoma,verdana,sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	text-align: left;
+}
+.PitanjaRight
+{
+	color: #284E98; /* crna boja #000000 hexadecimalna kombinacija, bela boja #ffffff hexadecimalna kombinacija */
+	font-family: tahoma,verdana,sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	text-align: right;
+}
+.PitanjaCenter
+{
+	color: #284E98; /* crna boja #000000 hexadecimalna kombinacija, bela boja #ffffff hexadecimalna kombinacija */
+	font-family: tahoma,verdana,sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	text-align: center;
+}
+
+.lblPred
+{
+	color: #284E98; /* crna boja #000000 hexadecimalna kombinacija, bela boja #ffffff hexadecimalna kombinacija */
+	font-family: tahoma,verdana,sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: left;
+}
+.mainText
+{
+	color: #636163;
+	font: 12px Arial;
+	text-decoration: none;
+}
+.TekstPitanja
+{
+	color: #284E98; /* crna boja #000000 hexadecimalna kombinacija, bela boja #ffffff hexadecimalna kombinacija */
+	font-family: tahoma,verdana,sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: center;
+}
+.Tekst10Left
+{
+	color: #284E98; /* crna boja #000000 hexadecimalna kombinacija, bela boja #ffffff hexadecimalna kombinacija */
+	font-family: tahoma,verdana,sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: left;
+}
+.Tekst10Center
+{
+	color: #284E98; /* crna boja #000000 hexadecimalna kombinacija, bela boja #ffffff hexadecimalna kombinacija */
+	font-family: tahoma,verdana,sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: center;
+}
+.Tekst10Red
+{
+	color: red; /* crna boja #000000 hexadecimalna kombinacija, bela boja #ffffff hexadecimalna kombinacija */
+	font-family: tahoma,verdana,sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	text-align: left;
+}
+.Tekst14center
+{
+	color: #284E98; /* crna boja #000000 hexadecimalna kombinacija, bela boja #ffffff hexadecimalna kombinacija */
+	font-family: tahoma,verdana,sans-serif;
+	font-size: 14pt;
+	font-weight: bold;
+	text-align: center;
+}
+.TekstOdgovora
+{
+	color: #000000; /* crna boja #000000 hexadecimalna kombinacija, bela boja #ffffff hexadecimalna kombinacija */
+	font-family: tahoma,verdana,sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+}
+
+.PonudjeniOdgovori
+{
+	color: #284E98; /* crna boja #000000 hexadecimalna kombinacija, bela boja #ffffff hexadecimalna kombinacija */
+	font-family: tahoma,verdana,sans-serif;
+	font-size: 8pt;
+	font-weight: bold;
+	text-align: right;
+}
+.TekstNoBold
+{
+	color: #284E98; /* crna boja #000000 hexadecimalna kombinacija, bela boja #ffffff hexadecimalna kombinacija */
+	font-family: tahoma,verdana,sans-serif;
+	font-size: 8pt;
+	font-weight: normal;
+	text-align: left;
+}
+.TekstNoBoldRed
+{
+	color: #FF0000;
+	font-family: tahoma,verdana,sans-serif;
+	font-size: 8pt;
+	font-weight: normal;
+	text-align: left;
+}
+.Mbtn1
+{
+	color: #108E31;
+	font: bold 10px Arial;
+	background-color: #DCDCDC;
+	border: 1px solid;
+	border-color: #108E31;
+}
+.Mbtn1Red
+{
+	color: #FF0000;
+	font: bold 10px Arial;
+	background-color: #DCDCDC;
+	border: 1px solid;
+	border-color: #108E31;
+}
+.Mbtn1V
+{
+	color: #284E98;
+	font-family: tahoma,verdana,sans-serif;
+	font-size: 8pt;
+	font-weight: normal;
+	background-color: #f1f1f1;
+	border: 1px solid;
+	border-color: #284E98;
+	cursor: hand;
+}
+.korisnik
+{
+	color: #FF7900;
+	font: bold 11px Arial;
+	text-decoration: none;
+	border: none;
+	text-align: left;
+}
+.copyright
+{
+	color: #284E98;
+	font: 9px Verdana;
+}
+.bottomMenu
+{
+	color: #FFffff;
+	font: bold 12px Arial;
+	text-decoration: none;
+}
+.menuAdmin1
+{
+	color: #636163;
+	font: bold 14px Arial;
+	text-align: center;
+	text-decoration: none;
+}
+.mainIzbor
+{
+	color: #333333;
+	font: bold 13px Arial;
+	text-decoration: none;
+}
+.tableBox1
+{
+	border-right: #DFDFDF 1px solid;
+	border-top: #DFDFDF 1px solid;
+	border-left: #DFDFDF 1px solid;
+	border-bottom: #DFDFDF 1px solid;
+	background-color: #ffffff;
+}
+.tableBox1V
+{
+	color: #284E98;
+	font-family: tahoma,verdana,sans-serif;
+	font-size: 8pt;
+	border: 1px solid #284E98;
+	background-color: #ffffff;
+}
+.tableBox1VRed
+{
+	color: #FF0000;
+	font-family: tahoma,verdana,sans-serif;
+	font-size: 8pt;
+	border: 1px solid #284E98;
+	background-color: #ffffff;
+}
+.h
+{
+	color: #003366;
+	font: bold 13px Arial;
+}
+.hM
+{
+	color: #003366;
+	font-family: tahoma,verdana,sans-serif;
+	font-weight: bold;
+	font-size: 10pt;
+}
+.h5M
+{
+	color: #003399;
+	font-family: tahoma,verdana,sans-serif;
+	font-weight: normal;
+	font-size: 8pt;
+}
+
+.h1
+{
+	color: #FF9933;
+	font: bold 13px Arial;
+}
+.h2
+{
+	color: #003366;
+	font: bold 12px Arial;
+}
+.h7
+{
+	color: #666666;
+	font: bold 12px Arial;
+	text-decoration: none;
+	cursor: hand;
+}
+.h7:hover
+{
+	color: #003366;
+	font: bold 12px Arial;
+	text-decoration: none;
+	cursor: hand;
+}
+.h7:active
+{
+	color: #cc3333;
+	font: bold 12px Arial;
+	text-decoration: none;
+	cursor: hand;
+}
+.h3
+{
+	color: #cc3333;
+	font: bold 12px Arial;
+}
+.h5
+{
+	color: #003399;
+	font: normal 11px Arial;
+}
+.h5:hover
+{
+	color: #FF9933;
+	font: 11px Arial;
+	text-decoration: none;
+}
+.h5:active
+{
+	color: #FF9933;
+	font: normal 11px Arial;
+	text-decoration: none;
+}
+.h6
+{
+	color: #003399;
+	font: normal 11px Arial;
+}
+.h4
+{
+	color: #08498C;
+	font: bold 12px Arial;
+}
+
+
+.Mc_text
+{
+	font-family: Verdana;
+	font-size: 9px;
+	text-decoration: none;
+	color: #C0C0C0;
+	vertical-align: middle;
+	font-weight: bold;
+}
+
+.Mtext
+{
+	font-family: Tahoma;
+	font-size: 9px;
+	color: #808080;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+/*tabelaRedPoRed*/
+.tabelaRedPoRed table
+{
+	background: #FFFFFF;
+	border: 1px white;
+	border-collapse: collapse;
+	padding: 0px;
+	color: #363636;
+	font: normal 11px verdana, arial, helvetica, sans-serif;
+	text-align: left;
+}
+
+/*tabela header*/
+.tabelaRedPoRed th
+{
+	border: 1px solid gray;
+	background: #E9E9E9;
+	color: #363636;
+	padding: .4em;
+	text-align: center;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+/*tabela kad se predje misem (ovako dobijemo da header bude podvucen)*/
+.tabelaRedPoRed tbody td a:hover
+{
+	text-decoration: underline;
+}
+
+
+
+
+/*tabela celija*/
+.tableDetalji1 td
+{
+	/*boja teksta u celijama*/
+	border: 1px solid #CCCCCC;
+	color: #CCCCCC;
+	padding: .3em;
+}
+/*tabela red*/
+.tableDetalji1 tr
+{
+	border: 0px;
+}
+
+
+/*boja kad se prelazi misem*/
+.tabelaRedPoRed tbody tr:hover
+{
+	background: #FFFFFF;
+	border: 1px solid #03476F;
+}
+
+/*boja brojeva u pageru*/
+.tabelaRedPoRed tbody td a
+{
+	color: #363636;
+	text-decoration: none;
+}
+
+/*boja fonta u zaglavlju*/
+.tabelaRedPoRed tbody th a
+{
+	color: #363636;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+
+/*tabela1*/
+.tableDetalji1 table
+{
+	background: #FFFFFF;
+	border: 0px white;
+	border-collapse: collapse;
+	padding: 0px;
+	color: #363636;
+	font: normal 11px verdana, arial, helvetica, sans-serif;
+	text-align: left;
+}
+
+/*tabela header*/
+.tableDetalji1 th
+{
+	border: 1px solid #CCCCCC;
+	background: #E9E9E9;
+	color: #363636;
+	padding: .4em;
+	text-align: center;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+/*tabela kad se predje misem (ovako dobijemo da header bude podvucen)*/
+.tableDetalji1 tbody td a:hover
+{
+	text-decoration: underline;
+}
+
+/*tabela celija*/
+.tableDetalji1 td
+{
+	/*boja teksta u celijama*/
+	border: 1px solid #CCCCCC;
+	color: #CCCCCC;
+	padding: .3em;
+}
+/*tabela red*/
+.tableDetalji1 tr
+{
+	border: 0px;
+}
+
+/*boja kad se prelazi misem*/
+/*.tableDetalji1 tbody tr:hover { */
+/* background:#CCCCCC;*/
+/* border:1px solid #03476F;*/
+/*}*/
+
+/*boja brojeva u pageru*/
+.tableDetalji1 tbody td a
+{
+	color: #363636;
+	text-decoration: none;
+}
+
+/*boja fonta u zaglavlju*/
+.tableDetalji1 tbody th a
+{
+	color: #363636;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+
+
+
+

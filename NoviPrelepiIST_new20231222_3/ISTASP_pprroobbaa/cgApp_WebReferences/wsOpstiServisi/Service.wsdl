@@ -1,0 +1,602 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="AutentifikacijaKorisnika_IzTabele_StoreProcedure">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Nalog" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="konekcija" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ImeStoreProcedure" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutentifikacijaKorisnika_IzTabele_StoreProcedureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AutentifikacijaKorisnika_IzTabele_StoreProcedureResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DajDS_IzUpita">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Upit" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="konekcija" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DajDS_IzUpitaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DajDS_IzUpitaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="konekcija" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RunQueryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpisPromenaBrisanje">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Upit" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="konekcija" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpisPromenaBrisanjeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpisPromenaBrisanjeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpisVratiID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Upit" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="konekcija" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpisVratiIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpisVratiIDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProveraFormataBrojaTelefona">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BrojTelefona" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProveraFormataBrojaTelefonaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProveraFormataBrojaTelefonaResult" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProveraFormataBrojaTelefona_MinDuzina">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BrojTelefona" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MinDuzinaBroja" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProveraFormataBrojaTelefona_MinDuzinaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProveraFormataBrojaTelefona_MinDuzinaResult" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsValidEmailFormat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inputEmail" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsValidEmailFormatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsValidEmailFormatResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsValidURL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inputURL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsValidURLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsValidURLResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsValid_TekstPolje">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TekstPolja" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="minDuzina" type="s:short" />
+            <s:element minOccurs="1" maxOccurs="1" name="maxDuzina" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsValid_TekstPoljeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsValid_TekstPoljeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsValidIPAddress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strIPAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsValidIPAddressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsValidIPAddressResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProveraIPAdrese">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IPAdresa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="konekcija" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ImeStoreProcedure" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ProveraIPAdreseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProveraIPAdreseResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Provera_Po_MOD11">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mbr" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Provera_Po_MOD11Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Provera_Po_MOD11Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AutentifikacijaKorisnika_IzTabele_StoreProcedureSoapIn">
+    <wsdl:part name="parameters" element="tns:AutentifikacijaKorisnika_IzTabele_StoreProcedure" />
+  </wsdl:message>
+  <wsdl:message name="AutentifikacijaKorisnika_IzTabele_StoreProcedureSoapOut">
+    <wsdl:part name="parameters" element="tns:AutentifikacijaKorisnika_IzTabele_StoreProcedureResponse" />
+  </wsdl:message>
+  <wsdl:message name="DajDS_IzUpitaSoapIn">
+    <wsdl:part name="parameters" element="tns:DajDS_IzUpita" />
+  </wsdl:message>
+  <wsdl:message name="DajDS_IzUpitaSoapOut">
+    <wsdl:part name="parameters" element="tns:DajDS_IzUpitaResponse" />
+  </wsdl:message>
+  <wsdl:message name="RunQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:RunQuery" />
+  </wsdl:message>
+  <wsdl:message name="RunQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:RunQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpisPromenaBrisanjeSoapIn">
+    <wsdl:part name="parameters" element="tns:UpisPromenaBrisanje" />
+  </wsdl:message>
+  <wsdl:message name="UpisPromenaBrisanjeSoapOut">
+    <wsdl:part name="parameters" element="tns:UpisPromenaBrisanjeResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpisVratiIDSoapIn">
+    <wsdl:part name="parameters" element="tns:UpisVratiID" />
+  </wsdl:message>
+  <wsdl:message name="UpisVratiIDSoapOut">
+    <wsdl:part name="parameters" element="tns:UpisVratiIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProveraFormataBrojaTelefonaSoapIn">
+    <wsdl:part name="parameters" element="tns:ProveraFormataBrojaTelefona" />
+  </wsdl:message>
+  <wsdl:message name="ProveraFormataBrojaTelefonaSoapOut">
+    <wsdl:part name="parameters" element="tns:ProveraFormataBrojaTelefonaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProveraFormataBrojaTelefona_MinDuzinaSoapIn">
+    <wsdl:part name="parameters" element="tns:ProveraFormataBrojaTelefona_MinDuzina" />
+  </wsdl:message>
+  <wsdl:message name="ProveraFormataBrojaTelefona_MinDuzinaSoapOut">
+    <wsdl:part name="parameters" element="tns:ProveraFormataBrojaTelefona_MinDuzinaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsValidEmailFormatSoapIn">
+    <wsdl:part name="parameters" element="tns:IsValidEmailFormat" />
+  </wsdl:message>
+  <wsdl:message name="IsValidEmailFormatSoapOut">
+    <wsdl:part name="parameters" element="tns:IsValidEmailFormatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsValidURLSoapIn">
+    <wsdl:part name="parameters" element="tns:IsValidURL" />
+  </wsdl:message>
+  <wsdl:message name="IsValidURLSoapOut">
+    <wsdl:part name="parameters" element="tns:IsValidURLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsValid_TekstPoljeSoapIn">
+    <wsdl:part name="parameters" element="tns:IsValid_TekstPolje" />
+  </wsdl:message>
+  <wsdl:message name="IsValid_TekstPoljeSoapOut">
+    <wsdl:part name="parameters" element="tns:IsValid_TekstPoljeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsValidIPAddressSoapIn">
+    <wsdl:part name="parameters" element="tns:IsValidIPAddress" />
+  </wsdl:message>
+  <wsdl:message name="IsValidIPAddressSoapOut">
+    <wsdl:part name="parameters" element="tns:IsValidIPAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="ProveraIPAdreseSoapIn">
+    <wsdl:part name="parameters" element="tns:ProveraIPAdrese" />
+  </wsdl:message>
+  <wsdl:message name="ProveraIPAdreseSoapOut">
+    <wsdl:part name="parameters" element="tns:ProveraIPAdreseResponse" />
+  </wsdl:message>
+  <wsdl:message name="Provera_Po_MOD11SoapIn">
+    <wsdl:part name="parameters" element="tns:Provera_Po_MOD11" />
+  </wsdl:message>
+  <wsdl:message name="Provera_Po_MOD11SoapOut">
+    <wsdl:part name="parameters" element="tns:Provera_Po_MOD11Response" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="AutentifikacijaKorisnika_IzTabele_StoreProcedure">
+      <wsdl:input message="tns:AutentifikacijaKorisnika_IzTabele_StoreProcedureSoapIn" />
+      <wsdl:output message="tns:AutentifikacijaKorisnika_IzTabele_StoreProcedureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DajDS_IzUpita">
+      <wsdl:input message="tns:DajDS_IzUpitaSoapIn" />
+      <wsdl:output message="tns:DajDS_IzUpitaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunQuery">
+      <wsdl:input message="tns:RunQuerySoapIn" />
+      <wsdl:output message="tns:RunQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpisPromenaBrisanje">
+      <wsdl:input message="tns:UpisPromenaBrisanjeSoapIn" />
+      <wsdl:output message="tns:UpisPromenaBrisanjeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpisVratiID">
+      <wsdl:input message="tns:UpisVratiIDSoapIn" />
+      <wsdl:output message="tns:UpisVratiIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProveraFormataBrojaTelefona">
+      <wsdl:input message="tns:ProveraFormataBrojaTelefonaSoapIn" />
+      <wsdl:output message="tns:ProveraFormataBrojaTelefonaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProveraFormataBrojaTelefona_MinDuzina">
+      <wsdl:input message="tns:ProveraFormataBrojaTelefona_MinDuzinaSoapIn" />
+      <wsdl:output message="tns:ProveraFormataBrojaTelefona_MinDuzinaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsValidEmailFormat">
+      <wsdl:input message="tns:IsValidEmailFormatSoapIn" />
+      <wsdl:output message="tns:IsValidEmailFormatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsValidURL">
+      <wsdl:input message="tns:IsValidURLSoapIn" />
+      <wsdl:output message="tns:IsValidURLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsValid_TekstPolje">
+      <wsdl:input message="tns:IsValid_TekstPoljeSoapIn" />
+      <wsdl:output message="tns:IsValid_TekstPoljeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsValidIPAddress">
+      <wsdl:input message="tns:IsValidIPAddressSoapIn" />
+      <wsdl:output message="tns:IsValidIPAddressSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ProveraIPAdrese">
+      <wsdl:input message="tns:ProveraIPAdreseSoapIn" />
+      <wsdl:output message="tns:ProveraIPAdreseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Provera_Po_MOD11">
+      <wsdl:input message="tns:Provera_Po_MOD11SoapIn" />
+      <wsdl:output message="tns:Provera_Po_MOD11SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AutentifikacijaKorisnika_IzTabele_StoreProcedure">
+      <soap:operation soapAction="http://tempuri.org/AutentifikacijaKorisnika_IzTabele_StoreProcedure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DajDS_IzUpita">
+      <soap:operation soapAction="http://tempuri.org/DajDS_IzUpita" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunQuery">
+      <soap:operation soapAction="http://tempuri.org/RunQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpisPromenaBrisanje">
+      <soap:operation soapAction="http://tempuri.org/UpisPromenaBrisanje" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpisVratiID">
+      <soap:operation soapAction="http://tempuri.org/UpisVratiID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProveraFormataBrojaTelefona">
+      <soap:operation soapAction="http://tempuri.org/ProveraFormataBrojaTelefona" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProveraFormataBrojaTelefona_MinDuzina">
+      <soap:operation soapAction="http://tempuri.org/ProveraFormataBrojaTelefona_MinDuzina" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsValidEmailFormat">
+      <soap:operation soapAction="http://tempuri.org/IsValidEmailFormat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsValidURL">
+      <soap:operation soapAction="http://tempuri.org/IsValidURL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsValid_TekstPolje">
+      <soap:operation soapAction="http://tempuri.org/IsValid_TekstPolje" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsValidIPAddress">
+      <soap:operation soapAction="http://tempuri.org/IsValidIPAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProveraIPAdrese">
+      <soap:operation soapAction="http://tempuri.org/ProveraIPAdrese" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Provera_Po_MOD11">
+      <soap:operation soapAction="http://tempuri.org/Provera_Po_MOD11" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AutentifikacijaKorisnika_IzTabele_StoreProcedure">
+      <soap12:operation soapAction="http://tempuri.org/AutentifikacijaKorisnika_IzTabele_StoreProcedure" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DajDS_IzUpita">
+      <soap12:operation soapAction="http://tempuri.org/DajDS_IzUpita" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunQuery">
+      <soap12:operation soapAction="http://tempuri.org/RunQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpisPromenaBrisanje">
+      <soap12:operation soapAction="http://tempuri.org/UpisPromenaBrisanje" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpisVratiID">
+      <soap12:operation soapAction="http://tempuri.org/UpisVratiID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProveraFormataBrojaTelefona">
+      <soap12:operation soapAction="http://tempuri.org/ProveraFormataBrojaTelefona" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProveraFormataBrojaTelefona_MinDuzina">
+      <soap12:operation soapAction="http://tempuri.org/ProveraFormataBrojaTelefona_MinDuzina" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsValidEmailFormat">
+      <soap12:operation soapAction="http://tempuri.org/IsValidEmailFormat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsValidURL">
+      <soap12:operation soapAction="http://tempuri.org/IsValidURL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsValid_TekstPolje">
+      <soap12:operation soapAction="http://tempuri.org/IsValid_TekstPolje" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsValidIPAddress">
+      <soap12:operation soapAction="http://tempuri.org/IsValidIPAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProveraIPAdrese">
+      <soap12:operation soapAction="http://tempuri.org/ProveraIPAdrese" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Provera_Po_MOD11">
+      <soap12:operation soapAction="http://tempuri.org/Provera_Po_MOD11" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://10.34.1.11/wsOpstiServisi/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://10.34.1.11/wsOpstiServisi/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

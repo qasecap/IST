@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="IzvrsiSQLvratiDT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sql" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="connPravaBaza" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lang" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IzvrsiSQLvratiDTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IzvrsiSQLvratiDTResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IzvrsiSQL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sql" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="connPravaBaza" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IzvrsiSQLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IzvrsiSQLResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IzvrsiSQLVratiBrojSlogova">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sql" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="connPravaBaza" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IzvrsiSQLVratiBrojSlogovaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IzvrsiSQLVratiBrojSlogovaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="IzvrsiSQLvratiDTSoapIn">
+    <wsdl:part name="parameters" element="tns:IzvrsiSQLvratiDT" />
+  </wsdl:message>
+  <wsdl:message name="IzvrsiSQLvratiDTSoapOut">
+    <wsdl:part name="parameters" element="tns:IzvrsiSQLvratiDTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IzvrsiSQLSoapIn">
+    <wsdl:part name="parameters" element="tns:IzvrsiSQL" />
+  </wsdl:message>
+  <wsdl:message name="IzvrsiSQLSoapOut">
+    <wsdl:part name="parameters" element="tns:IzvrsiSQLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IzvrsiSQLVratiBrojSlogovaSoapIn">
+    <wsdl:part name="parameters" element="tns:IzvrsiSQLVratiBrojSlogova" />
+  </wsdl:message>
+  <wsdl:message name="IzvrsiSQLVratiBrojSlogovaSoapOut">
+    <wsdl:part name="parameters" element="tns:IzvrsiSQLVratiBrojSlogovaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="IzvrsiSQLvratiDT">
+      <wsdl:input message="tns:IzvrsiSQLvratiDTSoapIn" />
+      <wsdl:output message="tns:IzvrsiSQLvratiDTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IzvrsiSQL">
+      <wsdl:input message="tns:IzvrsiSQLSoapIn" />
+      <wsdl:output message="tns:IzvrsiSQLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IzvrsiSQLVratiBrojSlogova">
+      <wsdl:input message="tns:IzvrsiSQLVratiBrojSlogovaSoapIn" />
+      <wsdl:output message="tns:IzvrsiSQLVratiBrojSlogovaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IzvrsiSQLvratiDT">
+      <soap:operation soapAction="http://tempuri.org/IzvrsiSQLvratiDT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IzvrsiSQL">
+      <soap:operation soapAction="http://tempuri.org/IzvrsiSQL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IzvrsiSQLVratiBrojSlogova">
+      <soap:operation soapAction="http://tempuri.org/IzvrsiSQLVratiBrojSlogova" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IzvrsiSQLvratiDT">
+      <soap12:operation soapAction="http://tempuri.org/IzvrsiSQLvratiDT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IzvrsiSQL">
+      <soap12:operation soapAction="http://tempuri.org/IzvrsiSQL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IzvrsiSQLVratiBrojSlogova">
+      <soap12:operation soapAction="http://tempuri.org/IzvrsiSQLVratiBrojSlogova" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="http://212.42.101.101/service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="http://212.42.101.101/service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

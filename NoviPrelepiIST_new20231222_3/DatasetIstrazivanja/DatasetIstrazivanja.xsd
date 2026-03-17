@@ -1,0 +1,182 @@
+<?xml version="1.0" standalone="yes" ?>
+<xs:schema id="DatasetIstrazivanja" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DatasetIstrazivanja" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">				
+				<xs:element name="IST">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="SIFIST" type="xs:string" minOccurs="0" />
+							<xs:element name="sifraT" type="xs:int" minOccurs="0" />
+							<xs:element name="Naziv" type="xs:string" minOccurs="0" />
+							<xs:element name="Metodologija" type="xs:string" minOccurs="0" />
+							<xs:element name="Upitnik" type="xs:string" minOccurs="0" />
+							<xs:element name="Periodika" type="xs:string" minOccurs="0" />
+							<xs:element name="BrojTabela" type="xs:int" minOccurs="0" />
+							<xs:element name="BAZA" type="xs:string" minOccurs="0" />
+							<xs:element name="ABAZA" type="xs:string" minOccurs="0" />
+							<xs:element name="TxtDir" type="xs:string" minOccurs="0" />
+							<xs:element name="ProgUnos" type="xs:string" minOccurs="0" />
+							<xs:element name="Vod" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Vdo" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Projektant" type="xs:string" minOccurs="0" />
+							<xs:element name="Statisticar" type="xs:string" minOccurs="0" />
+            	<xs:element name="CAPIServerName" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ISTBAZE">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Baza" type="xs:string" minOccurs="0" />
+							<xs:element name="FizBaza" type="xs:string" minOccurs="0" />
+							<xs:element name="IzrazODBC" type="xs:string" minOccurs="0" />
+							<xs:element name="IzrazOLE" type="xs:string" minOccurs="0" />
+							<xs:element name="vlasnik" type="xs:string" minOccurs="0" />
+							<xs:element name="prefix" type="xs:string" minOccurs="0" />
+							<xs:element name="Vod" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Vdo" type="xs:dateTime" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ISTLK">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="SIFIST" type="xs:string" minOccurs="0" />
+							<xs:element name="TABELA" type="xs:string" minOccurs="0" />
+							<xs:element name="RbrGreske" type="xs:string" minOccurs="0" />
+							<xs:element name="GRESKA" type="xs:string" minOccurs="0" />
+							<xs:element name="USLOV" type="xs:string" minOccurs="0" />
+							<xs:element name="NazivGreske" type="xs:string" minOccurs="0" />
+							<xs:element name="Akcija" type="xs:string" minOccurs="0" />
+							<xs:element name="tezina" type="xs:string" minOccurs="0" />
+							<xs:element name="Vod" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Vdo" type="xs:dateTime" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ISTPOLJA">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="SIFIST" type="xs:string" minOccurs="0" />
+							<xs:element name="TABELA" type="xs:string" minOccurs="0" />
+							<xs:element name="POLJE" type="xs:string" minOccurs="0" />
+							<xs:element name="KLJUC" type="xs:string" minOccurs="0" />
+							<xs:element name="RelBaza" type="xs:string" minOccurs="0" />
+							<xs:element name="RelTabela" type="xs:string" minOccurs="0" />
+							<xs:element name="RelPolje" type="xs:string" minOccurs="0" />
+							<xs:element name="VS" type="xs:string" minOccurs="0" />
+							<xs:element name="OD" type="xs:string" minOccurs="0" />
+							<xs:element name="DO" type="xs:string" minOccurs="0" />
+							<xs:element name="Opis" type="xs:string" minOccurs="0" />
+							<xs:element name="rbr" type="xs:int" minOccurs="0" />
+							<xs:element name="tip" type="xs:string" minOccurs="0" />
+							<xs:element name="duzina" type="xs:string" minOccurs="0" />
+							<xs:element name="Vod" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Vdo" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Forma" type="xs:string" minOccurs="0" />
+							<xs:element name="DG" type="xs:string" minOccurs="0" />
+							<xs:element name="Izraz" type="xs:string" minOccurs="0" />
+              <!--<xs:element name="VariableDescription" type="xs:string" minOccurs="0" />-->
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ISTTABS">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="SIFIST" type="xs:string" minOccurs="0" />
+							<xs:element name="RbrTabele" type="xs:int" minOccurs="0" />
+							<xs:element name="Naziv" type="xs:string" minOccurs="0" />
+							<xs:element name="NazivE" type="xs:string" minOccurs="0" />
+							<xs:element name="KVIRI" type="xs:string" minOccurs="0" />
+							<xs:element name="UpitZaTabelu" type="xs:string" minOccurs="0" />
+							<xs:element name="RIPORT" type="xs:string" minOccurs="0" />
+							<xs:element name="OpisTabele" type="xs:string" minOccurs="0" />
+							<xs:element name="Excel" type="xs:string" minOccurs="0" />
+							<xs:element name="SAS" type="xs:string" minOccurs="0" />
+							<xs:element name="ExcelZag" type="xs:string" minOccurs="0" />
+							<xs:element name="Program" type="xs:string" minOccurs="0" />
+							<xs:element name="Vod" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Vdo" type="xs:dateTime" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>				
+				<xs:element name="ISTTABELE">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="SifIst" type="xs:string" minOccurs="0" />
+							<xs:element name="Tabela" type="xs:string" minOccurs="0" />
+							<xs:element name="DG" type="xs:string" minOccurs="0" />
+							<xs:element name="NadTabela" type="xs:string" minOccurs="0" />
+							<xs:element name="Opis" type="xs:string" minOccurs="0" />
+							<xs:element name="RbrUnos" type="xs:int" minOccurs="0" />
+							<xs:element name="BAZA" type="xs:string" minOccurs="0" />
+							<xs:element name="ABAZA" type="xs:string" minOccurs="0" />
+							<xs:element name="T1" type="xs:string" minOccurs="0" />
+							<xs:element name="T2" type="xs:string" minOccurs="0" />
+							<xs:element name="Vod" type="xs:dateTime" minOccurs="0" />
+							<xs:element name="Vdo" type="xs:dateTime" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:key name="DatasetIstrazivanjaKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//ISTPOLJA" />
+			<xs:field xpath="SIFIST" />
+			<xs:field xpath="TABELA" />
+			<xs:field xpath="POLJE" />
+                        <xs:field xpath="VOD" />
+		</xs:key>
+		<xs:key name="DatasetIstrazivanjaKey4" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//ISTLK" />
+			<xs:field xpath="SIFIST" />
+			<xs:field xpath="TABELA" />
+			<xs:field xpath="RbrGreske" />
+		</xs:key>
+		<xs:key name="DatasetIstrazivanjaKey5" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//ISTTABS" />
+			<xs:field xpath="SIFIST" />
+			<xs:field xpath="RbrTabele" />
+		</xs:key>
+		<xs:key name="DatasetIstrazivanjaKey6" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//ISTBAZE" />
+			<xs:field xpath="Baza" />
+		</xs:key>	
+		<xs:key name="DatasetIstrazivanjaKey3" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//IST" />
+			<xs:field xpath="SIFIST" />
+		</xs:key>
+		<xs:keyref name="ISTISTLK" refer="DatasetIstrazivanjaKey3" msdata:AcceptRejectRule="Cascade"
+			msdata:DeleteRule="Cascade" msdata:UpdateRule="Cascade">
+			<xs:selector xpath=".//ISTLK" />
+			<xs:field xpath="SIFIST" />
+		</xs:keyref>
+		<xs:keyref name="ISTISTPOLJA" refer="DatasetIstrazivanjaKey3" msdata:AcceptRejectRule="Cascade"
+			msdata:DeleteRule="Cascade" msdata:UpdateRule="Cascade">
+			<xs:selector xpath=".//ISTPOLJA" />
+			<xs:field xpath="SIFIST" />
+		</xs:keyref>
+		<xs:keyref name="ISTBAZEIST" refer="DatasetIstrazivanjaKey6" msdata:AcceptRejectRule="Cascade"
+			msdata:DeleteRule="Cascade" msdata:UpdateRule="Cascade">
+			<xs:selector xpath=".//IST" />
+			<xs:field xpath="BAZA" />
+		</xs:keyref>
+		<xs:keyref name="ISTISTTABS" refer="DatasetIstrazivanjaKey3" msdata:AcceptRejectRule="Cascade"
+			msdata:DeleteRule="Cascade" msdata:UpdateRule="Cascade">
+			<xs:selector xpath=".//ISTTABS" />
+			<xs:field xpath="SIFIST" />
+		</xs:keyref>		
+		<xs:key name="DatasetIstrazivanjaKey2" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//ISTTABELE" />
+			<xs:field xpath="SifIst" />
+			<xs:field xpath="Tabela" />
+		</xs:key>
+		<xs:keyref name="ISTTABELEISTPOLJA" refer="DatasetIstrazivanjaKey2" msdata:AcceptRejectRule="Cascade"
+			msdata:DeleteRule="Cascade" msdata:UpdateRule="Cascade">
+			<xs:selector xpath=".//ISTPOLJA" />
+			<xs:field xpath="SIFIST" />
+			<xs:field xpath="TABELA" />
+		</xs:keyref>
+	</xs:element>
+</xs:schema>

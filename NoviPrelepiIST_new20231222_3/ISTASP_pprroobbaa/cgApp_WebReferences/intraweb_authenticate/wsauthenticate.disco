@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://www.statsrb.lan/wsauthenticate/wsauthenticate.asmx?wsdl" docRef="http://www.statsrb.lan/wsauthenticate/wsauthenticate.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://www.statsrb.lan/wsauthenticate/wsauthenticate.asmx" xmlns:q1="http://www.statsrb.lan/timeuse" binding="q1:wsAuthenticateSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://www.statsrb.lan/wsauthenticate/wsauthenticate.asmx" xmlns:q2="http://www.statsrb.lan/timeuse" binding="q2:wsAuthenticateSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

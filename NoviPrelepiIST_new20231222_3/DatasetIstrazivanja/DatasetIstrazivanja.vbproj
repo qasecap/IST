@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1748B7D4-9E32-4635-ADDB-EC39C1D35B00}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>DatasetIstrazivanja</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyMode>None</AssemblyOriginatorKeyMode>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionStrict>On</OptionStrict>
+    <RootNamespace>
+    </RootNamespace>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <MyType>Windows</MyType>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>1</WarningLevel>
+    <NoWarn>42016,42017,42018,42019,42032,42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CryptoReader">
+      <HintPath>..\_refs\CryptoReader.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Name>Microsoft.VisualBasic</Name>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Connected Services\WSISTKGZ\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\WSIST\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="DatasetIstrazivanja.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatasetIstrazivanja.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormMessageBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTemplate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ISTFormIsLoading.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ISTTheme.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ISTMessageBox.vb" />
+    <EmbeddedResource Include="FormMessageBox.resx">
+      <DependentUpon>FormMessageBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ISTFormIsLoading.resx">
+      <DependentUpon>ISTFormIsLoading.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Connected Services\WSISTKGZ\service.wsdl" />
+    <None Include="Connected Services\WSIST\Service.wsdl" />
+    <None Include="DatasetIstrazivanja.xsc">
+      <DependentUpon>DatasetIstrazivanja.xsd</DependentUpon>
+    </None>
+    <None Include="DatasetIstrazivanja.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatasetIstrazivanja.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DatasetIstrazivanja.xss">
+      <DependentUpon>DatasetIstrazivanja.xsd</DependentUpon>
+    </None>
+    <None Include="DatasetIstrazivanja.xsx">
+      <DependentUpon>DatasetIstrazivanja.xsd</DependentUpon>
+    </None>
+    <EmbeddedResource Include="FormTemplate.resx">
+      <DependentUpon>FormTemplate.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="My Project\DataSources\System.Data.DataSet.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\WSISTKGZ\" />
+    <WCFMetadataStorage Include="Connected Services\WSIST\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WSIST\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WSIST\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WSIST\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exclamation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gifIST.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif28-110.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif66-36.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif74-78.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif125-79.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif0-61.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif0-102.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif3-10.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif8-59.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif17-47.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif0-102.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif3-10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif8-59.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif17-47.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif28-110.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif66-36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif74-78.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif125-79.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gif0-61.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-83-24.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WSISTKGZ\service.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WSISTKGZ\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WSISTKGZ\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WSISTKGZ\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="DatasetTabeliranje" targetNamespace="http://tempuri.org/DatasetTabeliranje.xsd"
+	elementFormDefault="qualified" attributeFormDefault="qualified" xmlns="http://tempuri.org/DatasetTabeliranje.xsd"
+	xmlns:mstns="http://tempuri.org/DatasetTabeliranje.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:element name="DatasetTabeliranje" msdata:IsDataSet="true">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="GlavneKolone">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Kolona" type="xs:string" minOccurs="0" />
+							<xs:element name="Funkcija" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Konsult">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="SIFIST" type="xs:string" minOccurs="0" />
+							<xs:element name="TABELA" type="xs:string" minOccurs="0" />
+							<xs:element name="POLJE" type="xs:string" minOccurs="0" />
+							<xs:element name="RELTABELA" type="xs:string" minOccurs="0" />
+							<xs:element name="RELPOLJE" type="xs:string" minOccurs="0" />
+							<xs:element name="RELBAZA" type="xs:string" minOccurs="0" />
+							<xs:element name="TipDotNet" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+		<xs:key name="DatasetGlavneKoloneKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:GlavneKolone" />
+			<xs:field xpath="mstns:Kolona" />
+			<xs:field xpath="mstns:Funkcija" />
+		</xs:key>
+		<xs:key name="DatasetTabeliranjeKey1" msdata:PrimaryKey="true">
+			<xs:selector xpath=".//mstns:Konsult" />
+			<xs:field xpath="mstns:SIFIST" />
+			<xs:field xpath="mstns:TABELA" />
+			<xs:field xpath="mstns:POLJE" />
+			<xs:field xpath="mstns:RELTABELA" />
+			<xs:field xpath="mstns:RELPOLJE" />
+			<xs:field xpath="mstns:RELBAZA" />
+		</xs:key>
+	</xs:element>
+</xs:schema>

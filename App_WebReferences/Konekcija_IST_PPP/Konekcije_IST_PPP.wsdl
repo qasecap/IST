@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="AutentifikacijaUNI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Nalog" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="baza" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AutentifikacijaUNIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AutentifikacijaUNIResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DajDatumVreme">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="baza" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DajDatumVremeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DajDatumVremeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertLogovanjeArhivaUNI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ID_Session" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IP_Korisnika" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IDUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="baza" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="uspesno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="APP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Ovlascenja" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertLogovanjeArhivaUNIResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="PromenaLozinkeOdStraneKorisnika">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Nalog" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LozinkaOld" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LozinkaNew" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="baza" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PromenaLozinkeOdStraneKorisnikaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PromenaLozinkeOdStraneKorisnikaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="baza" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RunQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RunQueryResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpisPromenaBrisanje">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Upit" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="baza" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpisPromenaBrisanjeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpisPromenaBrisanjeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AutentifikacijaUNISoapIn">
+    <wsdl:part name="parameters" element="tns:AutentifikacijaUNI" />
+  </wsdl:message>
+  <wsdl:message name="AutentifikacijaUNISoapOut">
+    <wsdl:part name="parameters" element="tns:AutentifikacijaUNIResponse" />
+  </wsdl:message>
+  <wsdl:message name="DajDatumVremeSoapIn">
+    <wsdl:part name="parameters" element="tns:DajDatumVreme" />
+  </wsdl:message>
+  <wsdl:message name="DajDatumVremeSoapOut">
+    <wsdl:part name="parameters" element="tns:DajDatumVremeResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertLogovanjeArhivaUNISoapIn">
+    <wsdl:part name="parameters" element="tns:InsertLogovanjeArhivaUNI" />
+  </wsdl:message>
+  <wsdl:message name="InsertLogovanjeArhivaUNISoapOut">
+    <wsdl:part name="parameters" element="tns:InsertLogovanjeArhivaUNIResponse" />
+  </wsdl:message>
+  <wsdl:message name="PromenaLozinkeOdStraneKorisnikaSoapIn">
+    <wsdl:part name="parameters" element="tns:PromenaLozinkeOdStraneKorisnika" />
+  </wsdl:message>
+  <wsdl:message name="PromenaLozinkeOdStraneKorisnikaSoapOut">
+    <wsdl:part name="parameters" element="tns:PromenaLozinkeOdStraneKorisnikaResponse" />
+  </wsdl:message>
+  <wsdl:message name="RunQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:RunQuery" />
+  </wsdl:message>
+  <wsdl:message name="RunQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:RunQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpisPromenaBrisanjeSoapIn">
+    <wsdl:part name="parameters" element="tns:UpisPromenaBrisanje" />
+  </wsdl:message>
+  <wsdl:message name="UpisPromenaBrisanjeSoapOut">
+    <wsdl:part name="parameters" element="tns:UpisPromenaBrisanjeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Konekcije_IST_PPPSoap">
+    <wsdl:operation name="AutentifikacijaUNI">
+      <wsdl:input message="tns:AutentifikacijaUNISoapIn" />
+      <wsdl:output message="tns:AutentifikacijaUNISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DajDatumVreme">
+      <wsdl:input message="tns:DajDatumVremeSoapIn" />
+      <wsdl:output message="tns:DajDatumVremeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertLogovanjeArhivaUNI">
+      <wsdl:input message="tns:InsertLogovanjeArhivaUNISoapIn" />
+      <wsdl:output message="tns:InsertLogovanjeArhivaUNISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PromenaLozinkeOdStraneKorisnika">
+      <wsdl:input message="tns:PromenaLozinkeOdStraneKorisnikaSoapIn" />
+      <wsdl:output message="tns:PromenaLozinkeOdStraneKorisnikaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RunQuery">
+      <wsdl:input message="tns:RunQuerySoapIn" />
+      <wsdl:output message="tns:RunQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpisPromenaBrisanje">
+      <wsdl:input message="tns:UpisPromenaBrisanjeSoapIn" />
+      <wsdl:output message="tns:UpisPromenaBrisanjeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Konekcije_IST_PPPSoap" type="tns:Konekcije_IST_PPPSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AutentifikacijaUNI">
+      <soap:operation soapAction="http://tempuri.org/AutentifikacijaUNI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DajDatumVreme">
+      <soap:operation soapAction="http://tempuri.org/DajDatumVreme" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertLogovanjeArhivaUNI">
+      <soap:operation soapAction="http://tempuri.org/InsertLogovanjeArhivaUNI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PromenaLozinkeOdStraneKorisnika">
+      <soap:operation soapAction="http://tempuri.org/PromenaLozinkeOdStraneKorisnika" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunQuery">
+      <soap:operation soapAction="http://tempuri.org/RunQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpisPromenaBrisanje">
+      <soap:operation soapAction="http://tempuri.org/UpisPromenaBrisanje" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Konekcije_IST_PPPSoap12" type="tns:Konekcije_IST_PPPSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AutentifikacijaUNI">
+      <soap12:operation soapAction="http://tempuri.org/AutentifikacijaUNI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DajDatumVreme">
+      <soap12:operation soapAction="http://tempuri.org/DajDatumVreme" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertLogovanjeArhivaUNI">
+      <soap12:operation soapAction="http://tempuri.org/InsertLogovanjeArhivaUNI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PromenaLozinkeOdStraneKorisnika">
+      <soap12:operation soapAction="http://tempuri.org/PromenaLozinkeOdStraneKorisnika" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RunQuery">
+      <soap12:operation soapAction="http://tempuri.org/RunQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpisPromenaBrisanje">
+      <soap12:operation soapAction="http://tempuri.org/UpisPromenaBrisanje" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Konekcije_IST_PPP">
+    <wsdl:port name="Konekcije_IST_PPPSoap" binding="tns:Konekcije_IST_PPPSoap">
+      <soap:address location="http://imt.statsrb.lan/ws_IST_PPP/Konekcije_IST_PPP.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Konekcije_IST_PPPSoap12" binding="tns:Konekcije_IST_PPPSoap12">
+      <soap12:address location="http://imt.statsrb.lan/ws_IST_PPP/Konekcije_IST_PPP.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

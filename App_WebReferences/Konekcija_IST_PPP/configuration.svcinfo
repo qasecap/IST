@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configurationSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:schemas-microsoft-com:xml-wcfconfigurationsnapshot">
+  <behaviors />
+  <bindings>
+    <binding digest="System.ServiceModel.Configuration.BasicHttpBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089:&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data name=&quot;Konekcije_IST_PPPSoap&quot; /&gt;" bindingType="basicHttpBinding" name="Konekcije_IST_PPPSoap" />
+  </bindings>
+  <endpoints>
+    <endpoint normalizedDigest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;http://imt.statsrb.lan/ws_IST_PPP/Konekcije_IST_PPP.asmx&quot; binding=&quot;basicHttpBinding&quot; bindingConfiguration=&quot;Konekcije_IST_PPPSoap&quot; contract=&quot;Konekcija_IST_PPP.Konekcije_IST_PPPSoap&quot; name=&quot;Konekcije_IST_PPPSoap&quot; /&gt;" digest="&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?&gt;&lt;Data address=&quot;http://imt.statsrb.lan/ws_IST_PPP/Konekcije_IST_PPP.asmx&quot; binding=&quot;basicHttpBinding&quot; bindingConfiguration=&quot;Konekcije_IST_PPPSoap&quot; contract=&quot;Konekcija_IST_PPP.Konekcije_IST_PPPSoap&quot; name=&quot;Konekcije_IST_PPPSoap&quot; /&gt;" contractName="Konekcija_IST_PPP.Konekcije_IST_PPPSoap" name="Konekcije_IST_PPPSoap" />
+  </endpoints>
+</configurationSnapshot>

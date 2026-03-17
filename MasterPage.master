@@ -1,0 +1,101 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/static/css/Login.css" rel="Stylesheet" type="text/css" />
+    <link href="~/static/css/MainStyle.css" rel="Stylesheet" type="text/css" />
+    <link href="~/static/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/static/images/logo.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="~/static/css/fontawesome.css" rel="stylesheet">
+    <link href="~/static/css/brands.css" rel="stylesheet">
+    <link href="~/static/css/solid.css" rel="stylesheet">
+
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="cont">
+            <div class="header pattern" style="box-shadow: 2px 2px 5px lightgray">
+                <div class="section1">
+                    <img src="../static/images/gerb.svg" height="70" width="70" class="hidden-xs">
+                    <img src="https://stat.gov.kg/static/images/logoruscolor.svg" height="80" width="80" alt="National Statistical Committee of the Kyrgyz Republic">
+
+                    <%--<img src="../static/images/gerb.svg" height="70" width="70" class="hidden-xs">
+                    <img src="../static/images/logo.png" alt="National Statistical Committee of the Kyrgyz Republic">--%>
+                    <h3><span id="trnslt_headertitle" runat="server">National Statistical Committee of the Kyrgyz Republic</span>
+                        <%--<asp:LinkButton ID="settings" runat="server" Text="image" Visible="false" Style="float: right"></asp:LinkButton>--%>
+                        <%--<asp:DropDownList runat="server" ID="DDLSettings" AutoPostBack="true" CssClass="lang" OnSelectedIndexChanged="DDLSettings_selectedIndexChanged" ></asp:DropDownList>--%>
+                        <%--<asp:LinkButton ID="trnslt_logout" runat="server" Text="Logout" Style="float: right"></asp:LinkButton>
+                        <asp:Label ID="Nalog" runat="server" Text="" Style="float: right; text-decoration: underline;"></asp:Label>
+                        <asp:LinkButton ID="trnslt_options" runat="server" Text="adm app" Visible="false" Style="float: right">adm</asp:LinkButton>--%>
+
+                    </h3>
+                    <div class="dropdown-wrapper">
+                        <asp:LinkButton ID="trnslt_btnToggleDropdown" Text="☰" Style="min-width: 120px" runat="server" CssClass="icon-button" OnClientClick="toggleDropdown(); return false;">☰ Options</asp:LinkButton>
+
+                        <asp:Panel ID="pnlDropdown" runat="server" CssClass="dropdown-container" Style="display: none;">
+                            <%--<asp:Button ID="btnOption1" runat="server" Text="Option 1" CssClass="dropdown-item" />
+                            <asp:Button ID="btnOption2" runat="server" Text="Option 2" CssClass="dropdown-item" />
+                            <asp:Button ID="btnOption3" runat="server" Text="Option 3" CssClass="dropdown-item" />--%>
+                            <%--<asp:Button ID="optionstest1" runat="server" Text="adm app"  CssClass="dropdown-item"></asp:Button>--%>
+                            <%--<p>R_PRED</p>--%>
+                            <asp:Button ID="Nalog" Visible="false" runat="server" Text="" CssClass="dropdown-item" Enabled="false"></asp:Button>
+                            <asp:Button ID="trnslt_options" runat="server" Text="adm app" Visible="false" CssClass="dropdown-item"></asp:Button>
+                            <asp:DropDownList runat="server" ID="DDLLang" AutoPostBack="true" CssClass="dropdown-item" OnSelectedIndexChanged="DDLLang_selectedIndexChanged"></asp:DropDownList>
+                            <asp:Button ID="trnslt_logout" runat="server" Text="Logout" CssClass="dropdown-item"></asp:Button>
+                        </asp:Panel>
+                    </div>
+                </div>
+            </div>
+
+
+            <%--<asp:Button ID="btnToggleDropdown" runat="server" Text="&#x25BC;" CssClass="icon-button" UseSubmitBehavior="false" OnClientClick="toggleDropdown(); return false;" />--%>
+
+            <div>
+                <asp:ContentPlaceHolder ID="bodyMainTable" runat="server"></asp:ContentPlaceHolder>
+            </div>
+            <div class="content">
+                <asp:ContentPlaceHolder ID="body" runat="server"></asp:ContentPlaceHolder>
+            </div>
+            <%--<div class="footer pattern">--%>
+                <%--<span>Footer</span>
+                <a href="https://www.flaticon.com/free-animated-icons/save" title="save animated icons">Save animated icons created by Freepik - Flaticon</a>--%>
+
+                <%--<asp:DropDownList runat="server" ID="DDLLang" AutoPostBack="true" CssClass="lang" OnSelectedIndexChanged="DDLLang_selectedIndexChanged"></asp:DropDownList>--%>
+                <%--OnChange="reloadPageWithQueryString()"--%>
+                <%----%>
+            <%--</div>--%>
+        </div>
+        <script src="static/js/login.js"></script>
+    </form>
+
+    <script type="text/javascript">
+        function reloadPageWithQueryString() {
+            var ddl = document.getElementById('<%= DDLLang.ClientID %>');
+            var selectedValue = ddl.options[ddl.selectedIndex].value;
+            const urlParams = new URLSearchParams(window.location.search);
+            var queryString = "";
+            for (const [key, value] of urlParams.entries()) {
+                queryString += `${key}=${value}&`
+            }
+            //queryString = queryString.replace("&", "");
+
+            // Append a query string to indicate a reload
+            window.location.href = window.location.pathname + "?" + queryString + "selectedValue=" + encodeURIComponent(selectedValue);
+            //    '?reload=true&selectedValue=' + encodeURIComponent(selectedValue);
+        }
+    </script>
+
+    <script type="text/javascript">
+        function toggleDropdown() {
+            var panel = document.getElementById('<%= pnlDropdown.ClientID %>');
+            panel.style.display = (panel.style.display === "none") ? "block" : "none";
+        }
+    </script>
+</body>
+</html>

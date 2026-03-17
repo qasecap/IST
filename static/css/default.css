@@ -1,0 +1,574 @@
+﻿#top-of-site-pixel-anchor {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    top: 500px;
+    left: 0;
+}
+
+/*bstrap object..ride*/
+.form-control {
+    display: block;
+    width: 100%;
+    /* height: 36px; */
+    margin: 5px 0;
+    padding: 4px 5px;
+    font-size: 13px;
+    line-height: 1.5384616;
+    color: #333333;
+    /*background-color: #FFE;*/
+    background-image: none;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    /*box-shadow: inset 0 0 5px 2px #888;*/
+}
+
+.form-control-bck {
+    /*background-color: #FFE;*/
+
+    /*background-color:mintcream;*/ /*boja labela*/
+}
+
+.form-label-bck {
+    cursor: not-allowed;
+}
+
+    .form-control:focus {
+        box-shadow: inset 0 0 7px -2px #100720;
+    }
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    /*border-bottom: 1px dotted black;  If you want dots under the hoverable text */
+}
+
+    /* Tooltip text */
+    .tooltip .tooltiptext {
+        width: 250px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        /* Position the tooltip text - see examples below! */
+        position: absolute;
+        z-index: 999;
+    }
+
+.tooltiptext {
+    visibility: hidden;
+}
+
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        /*color: white;*/
+    }
+
+
+
+.small {
+    width: 50px; 
+}
+
+
+
+    /* The navigation menu links */
+    .sidenav a {
+        /*padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 12px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;*/
+    }
+
+        /* When you mouse over the navigation links, change their color */
+        /*.sidenav a:hover {
+            color: #f1f1f1;
+        }*/
+
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+
+.mainSmall {
+    margin-left: 50px;
+}
+
+
+
+.spanLink {
+    padding: 10px;
+    background-color: #54B435;
+    border-radius: 10px;
+}
+
+.linkShow {
+    /*transition: all 2s linear;*/
+    display: inline;
+    opacity: 1;
+    /*color: #383838;*/
+    padding: 10px;
+    width:100%;
+}
+
+.linkHide {
+    display: none;
+}
+
+.linkVisHide {
+    /*opacity: 0;*/
+}
+
+/*#mySidenav {
+    width: 350px;
+}*/
+
+.mainmenu, .submenu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /*font-size: 12px;*/
+    font-size: 1.6vw;
+    color: white;
+}
+
+.mainmenu {
+    padding: 0 10px;
+    /*font-size: 16px;*/
+    /*font-size: 1.6vw;*/
+}
+
+.mainmenuLinks {
+    display: table-cell;
+    padding: 8px; /*8*/
+    /*border: 3px dashed #1c87c9;*/
+    vertical-align: middle;
+}
+
+
+
+    .positiveLine {
+        /*background-color: #54B435;
+    border-radius: 10px;*/
+        /*text-decoration: underline;*/
+        /*text-decoration-color: #54B435;
+    color: #54B435;*/
+        text-decoration-color: #009439;
+        color: #009439;
+        /*border: 1px solid #009439;*/
+    }
+
+    .negativeLine {
+        /*background-color: #DC0000;
+    border-radius: 10px;*/
+        /*text-decoration: underline;*/
+        /*text-decoration-color: #DC0000;
+    color: #DC0000;*/
+        text-decoration-color: #990000;
+        color: #990000;
+        /*border: 1px solid #990000;*/
+    }
+
+    .EmptyLine {
+        /*background-color: #DC0000;
+    border-radius: 10px;*/
+        /*text-decoration: underline;*/
+        /*text-decoration-color: #383838;*/
+        /*color: #383838;*/
+    }
+
+        .EmptyLine:hover {
+            /*background-color: #DC0000;
+    border-radius: 10px;*/
+            /*text-decoration: underline;*/
+            /*text-decoration-color: #383838;*/
+            color: white;
+        }
+
+
+
+    .submenu {
+        display: none;
+        overflow: hidden;
+        max-height: 0;
+        /*-webkit-transition: all 0.5s ease-out;*/
+        /*background-color: #3C84AB;*/
+        border-radius: 0 0 20px 20px;
+        padding: 10px 10px;
+    }
+
+    /*.submenu a {
+        color: #383838;
+    }*/
+
+
+
+
+
+    /*.mainmenu a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+}*/
+
+    .indent {
+        margin-left: 30px;
+    }
+
+    .indentx2 {
+        margin-left: 60px;
+    }
+
+
+    .hide {
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+
+    /*.mainmenu li:hover .submenu {
+  display: block;
+  max-height: 400px;
+}*/
+
+    .divRow {
+        display: flex;
+        height: 5vh;
+    }
+
+    .divCol {
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+
+    /*smanjeno nav 9 zbog edga*/
+    .ml-10 {
+        margin-left: 9px;
+    }
+
+
+    .menuSelected {
+        /*background-color: #C5C5C5;*/
+        /*background-color: #3C84AB;*/
+        /*color: black;*/
+        border-radius: 15px 15px 0 0;
+    }
+
+    .submenuSelected {
+        /*background-color: #C5C5C5;*/
+        /*background-color: #00425A;
+    color: black;*/
+    }
+
+    .submenuHeight {
+        display: block;
+        max-height: 400px;
+        /*transition: cubic-bezier(5,5,5,5);*/
+    }
+
+    .modalPanel {
+        /*width: 500px;
+    border: 1px solid black;*/
+        display: table;
+        text-align: center;
+        position: fixed; /* Stay in place */
+        z-index: 100; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        /*background-color: rgb(0,0,0);  Fallback color */
+        /*background-color: rgba(0,0,0,0.4);  Black w/ opacity */
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 40px 20px;
+        border: 1px solid #888;
+        width: 30%; /* Could be more or less, depending on screen size */
+    }
+
+    .completionListElement {
+        font-family: Verdana, Helvetica, sans-serif;
+        font-size: 1em;
+        font-weight: normal;
+        border: solid 1px #006699;
+        line-height: 20px;
+        padding: 10px;
+        background-color: White;
+        margin-left: 10px;
+        text-align: left;
+    }
+
+    .listItem {
+        border-bottom: dotted 1px #006699;
+        cursor: pointer;
+        color: Maroon;
+        margin-left: 10px;
+        text-align: left;
+        font-family: Verdana, Helvetica, sans-serif;
+        font-weight: normal;
+    }
+
+    .highlightedListItem {
+        color: white;
+        background-color: #006699;
+        cursor: pointer;
+        margin-left: 10px;
+        text-align: left;
+        font-family: Verdana, Helvetica, sans-serif;
+        font-weight: normal;
+    }
+
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+    /*@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+
+    #loginImage {
+        display: none;
+    }
+}*/
+
+    /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+    @media screen and (min-width: 1371px) {
+        .sidenav { /*padding-top: 10px; 60px*/ /*            top: 3vw;*/ /*top: 9vw;*/ }
+
+        .mainmenu, .submenu {
+            font-size: 15px; /*17*/
+            line-height: 1.1;
+        }
+
+        .helperUL {
+            position: fixed;
+            bottom: 40px;
+            list-style-type: none;
+            padding: 0;
+        }
+        .sticky-top {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 2.4vw;
+            z-index: 99;
+            background: white;
+        }
+    }
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1050;
+}
+
+    /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+    @media screen and (max-width: 1370px) {
+        .sidenav { /*padding-top: 10px;
+            top: 4.4vw;*/ }
+
+        .breadcrumbHeader {
+            display:none;
+        }
+
+        .submenu {
+            padding: 0;
+        }
+
+        .mainmenu, .submenu {
+            font-size: 14px;
+            line-height: 0.9;
+        }
+
+        .helperUL {
+            position: fixed;
+            bottom: 15px;
+            list-style-type: none;
+            padding: 0;
+        }
+        .mainmenuLinks {
+            padding: 8px;
+        }
+        .sticky-top {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 3.4vw;
+            z-index: 99;
+            background:white;
+        }
+    }
+
+    .big {
+        width: 11vw;
+    }
+
+
+.sidenav { margin-top:10px; position: fixed; z-index: 1; }
+
+
+
+#main { display: flex; border-left: 1px solid; flex-direction: column; max-height: fit-content; right: 1vw; border-radius: 0 20px 20px 0; padding: 0 20px 20px 20px; margin-top: 10px; }
+
+
+
+.align-vertically {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-35%);
+}
+
+.mainBig {
+    margin-left: 12vw;
+    /*margin-top:1vw;*/
+}
+
+    /*dropdown menu*/
+    /* Dropdown Button */
+.dropbtn, .dropbtnHidden {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+        /* Dropdown button on hover & focus */
+        .dropbtn:hover, .dropbtn:focus {
+            /*background-color: #2980B9;*/
+        }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 240px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        right: 0;
+        z-index: 1;
+    }
+
+        /* Links inside the dropdown */
+        .dropdown-content a, .dropdown-content button {
+            /*color: black;*/
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            text-align: left;
+            border: none;
+        }
+
+.form-label-bck{
+    
+}
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display: block;
+}
+    /*dropdown menu*/
+
+.nmicon-RZSLogoUniColor:before {
+    content: "\e941";
+}
+
+.nmicon-RZSLogo .path1:before {
+    content: "\e942";
+    color: rgb(70, 114, 184);
+}
+
+.nmicon-RZSLogo .path2:before {
+    content: "\e943";
+    margin-left: -4.107421875em;
+    color: rgb(70, 114, 184);
+}
+
+.nmicon-RZSLogo .path3:before {
+    content: "\e944";
+    margin-left: -4.107421875em;
+    color: rgb(255, 255, 255);
+}
+
+.nmicon-RZSLogo .path4:before {
+    content: "\e945";
+    margin-left: -4.107421875em;
+    color: rgb(56, 53, 53);
+}
+
+.nmicon-RZSLogo .path5:before {
+    content: "\e946";
+    margin-left: -4.107421875em;
+    color: rgb(56, 53, 53);
+}
+
+.nmicon-RZSLogo .path6:before {
+    content: "\e947";
+    margin-left: -4.107421875em;
+    color: rgb(56, 53, 53);
+}
+
+.nmicon-RZSLogo .path7:before {
+    content: "\e948";
+    margin-left: -4.107421875em;
+    color: rgb(70, 114, 184);
+}
+
+.nmicon-RZSLogo .path8:before {
+    content: "\e949";
+    margin-left: -4.107421875em;
+    color: rgb(70, 114, 184);
+}
+
+.nmicon-RZSLogo .path9:before {
+    content: "\e94a";
+    margin-left: -4.107421875em;
+    color: rgb(70, 114, 184);
+}
+
+.nmicon-RZSLogo .path10:before {
+    content: "\e94b";
+    margin-left: -4.107421875em;
+    color: rgb(70, 114, 184);
+}
+
+.nmicon-RZSLogo .path11:before {
+    content: "\e94c";
+    margin-left: -4.107421875em;
+    color: rgb(70, 114, 184);
+}
+
+.nmicon-RZSLogo .path12:before {
+    content: "\e94d";
+    margin-left: -4.107421875em;
+    color: rgb(70, 114, 184);
+}

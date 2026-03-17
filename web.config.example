@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<configuration>
+  <connectionStrings>
+    <!-- Copy this file to web.config and fill in your local values -->
+    <add name="connIST"     providerName="System.Data.SqlClient" connectionString="Data Source=YOUR_SERVER;Initial Catalog=IST;User ID=YOUR_USER;Password=YOUR_PASSWORD"/>
+    <add name="connISTWEB"  providerName="System.Data.SqlClient" connectionString="Data Source=YOUR_SERVER;Initial Catalog=ISTWeb;User ID=YOUR_USER;Password=YOUR_PASSWORD"/>
+    <add name="conn"        providerName="System.Data.SqlClient" connectionString="Data Source=YOUR_SERVER;Initial Catalog=IST;User ID=YOUR_USER;Password=YOUR_PASSWORD"/>
+    <add name="connLog"     providerName="System.Data.SqlClient" connectionString="Data Source=YOUR_SERVER;Initial Catalog=DEPO;User ID=YOUR_USER;Password=YOUR_PASSWORD"/>
+    <add name="connCatalog" providerName="System.Data.SqlClient" connectionString="Data Source=YOUR_SERVER;Initial Catalog=Catalogs;User ID=YOUR_USER;Password=YOUR_PASSWORD"/>
+  </connectionStrings>
+
+  <system.web>
+    <compilation defaultLanguage="vb" debug="true" targetFramework="4.5.2">
+      <assemblies>
+        <add assembly="System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+      </assemblies>
+    </compilation>
+    <customErrors mode="RemoteOnly" defaultRedirect="ErrorPage.aspx"/>
+    <pages controlRenderingCompatibilityVersion="3.5" clientIDMode="AutoID">
+      <controls>
+        <add assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagPrefix="asp"/>
+      </controls>
+    </pages>
+  </system.web>
+
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="ServiceSoap"  maxBufferSize="2147483647" maxReceivedMessageSize="2147483647"/>
+        <binding name="ServiceSoap1" maxBufferSize="2147483647" maxReceivedMessageSize="2147483647"/>
+        <binding name="ServiceSoap2" maxBufferSize="2147483647" maxReceivedMessageSize="2147483647"/>
+        <binding name="ServiceSoap3"/>
+        <binding name="Konekcije_IST_PPPSoap"/>
+      </basicHttpBinding>
+    </bindings>
+    <client>
+      <!-- Replace with your actual service endpoints -->
+      <endpoint address="http://YOUR_WS_SERVER/wsOpstiServisi/Service.asmx"  binding="basicHttpBinding" bindingConfiguration="ServiceSoap"  contract="wsAzureOpsti.ServiceSoap"           name="ServiceSoap"/>
+      <endpoint address="http://YOUR_WS_SERVER/service.asmx"                  binding="basicHttpBinding" bindingConfiguration="ServiceSoap1" contract="wsOpstiDesktop.ServiceSoap"         name="wsOpstiDesktop"/>
+      <endpoint address="http://YOUR_WS_SERVER/Service.asmx"                  binding="basicHttpBinding" bindingConfiguration="ServiceSoap2" contract="wsLocalBeka.ServiceSoap"            name="ServiceSoap1"/>
+      <endpoint address="http://YOUR_WS_SERVER/wsOpstiServisi/Service.asmx"  binding="basicHttpBinding" bindingConfiguration="ServiceSoap3" contract="wsoAzureMarko.ServiceSoap"          name="ServiceSoap2"/>
+      <endpoint address="http://YOUR_WS_SERVER/ws_IST_PPP/Konekcije_IST_PPP.asmx" binding="basicHttpBinding" bindingConfiguration="Konekcije_IST_PPPSoap" contract="Konekcija_IST_PPP.Konekcije_IST_PPPSoap" name="Konekcije_IST_PPPSoap"/>
+    </client>
+  </system.serviceModel>
+</configuration>

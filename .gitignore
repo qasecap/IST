@@ -1,0 +1,20 @@
+# Build output
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Old/backup files
+old/
+
+# Publish profiles (may contain server info)
+App_Data/PublishProfiles/
+
+# Local web.config (contains passwords) - use web.config.example
+web.config
+
+# IIS Express config
+applicationhost.config
